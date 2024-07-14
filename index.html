@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magnetic Field Simulator</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            background: #333;
+            color: #ccc;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        canvas {
+            border: 1px solid #fff;
+        }
+        #instructions {
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+        #controls {
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            margin-right: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div id="instructions">
+        <p>Welcome to the Magnetic Field Simulator! Use the buttons below to add magnets to the canvas.</p>
+        <p>Click and drag to move the magnets and see how their magnetic fields interact.</p>
+        <p>Red represents a North pole and blue a South pole. Yellow lines show magnetic field interactions.</p>
+    </div>
+    <div id="controls">
+        <button onclick="addMagnet(1)">Add North Pole</button>
+        <button onclick="addMagnet(-1)">Add South Pole</button>
+    </div>
+    <canvas id="magnetCanvas" width="800" height="600"></canvas>
+    <script src="magnets.js"></script>
+</body>
+</html>
